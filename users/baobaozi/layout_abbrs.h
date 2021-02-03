@@ -83,7 +83,7 @@
 // #define _________________ROW_MID_COLMK_R_________________ KC_H     ,MS(N)    ,MG(E)    ,MA(I)    ,MC(O)
 
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_COLMK_R_________________ KC_J     ,KC_L     ,KC_U     ,KC_Y     ,KC_QUOT
+#define _________________ROW_TOP_COLMK_R_________________ KC_J     ,KC_L     ,KC_U     ,KC_Y     ,MG(QUOT)
 #define _________________ROW_MID_COLMK_R_________________ KC_H     ,KC_N     ,KC_E     ,KC_I     ,KC_O
 #define _________________ROW_BOT_COLMK_R_________________ KC_K     ,KC_M     ,KC_COMM  ,KC_DOT   ,MS(SLSH)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
