@@ -74,12 +74,12 @@ enum combo_events {
 #endif
 };
 
-const uint16_t PROGMEM tab_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM ent_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM grv_combo[] = {KC_C, KC_V, COMBO_END};
-const uint16_t PROGMEM ent_combo[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM tab_combo[] = {KC_COMM, KC_DOT, COMBO_END};
 // const uint16_t PROGMEM nument_combo[] = {KC_2, KC_3, COMBO_END}; // still be able to hit enter with the same spot as default layer … though I usually don’t. Maybe turn off?
 const uint16_t PROGMEM esc_combo[] = {MS(SLSH), KC_M, COMBO_END};
-const uint16_t PROGMEM tgpri_combo[] = {KC_SCLN, KC_O, MS(SLSH), COMBO_END}; // for when I watch TV
+const uint16_t PROGMEM tgpri_combo[] = {KC_QUOT, KC_O, MS(SLSH), COMBO_END}; // for when I watch TV
 const uint16_t PROGMEM apo_combo[] = {KC_P, KC_T, COMBO_END}; // vertical combo works well on DSA, but it a bit troublesome on OEM
 const uint16_t PROGMEM oss_combo[] = {KC_N, KC_E, KC_I, COMBO_END}; // one shot shift in same spot both hands, so depending on which letter next you need to shift
 const uint16_t PROGMEM ossl_combo[] = {KC_R, KC_S, KC_T, COMBO_END}; // left hand mirror here
