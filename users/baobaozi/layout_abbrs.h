@@ -55,13 +55,13 @@
 // Just leave ARSTNEIO with my own thumb key lol, theirs is shit
 #define __T_L1___ LM1
 // turns out, I keep mispressing one shots on thumbs, so turn it off for now
-#define __T_L2___ KC_LCTL
+#define __T_L2___ LM2
 #define __T_L3___ KC_LALT
 // If there's an extra left thumb key:
 #define __T_L4___ LT4(CAPS)
 // Right thumbs
 #define __T_R1___ KC_SPC
-#define __T_R2___ LM2
+#define __T_R2___ KC_LCTL
 #define __T_R3___ LT4(CAPS)
 // If there's an extra right thumb key, I prefer it between 2 and 3:
 #define __T_R2B__ KC_LCTL
@@ -74,9 +74,9 @@
 #define _________________ROW_NUMBERS_R___________________ KC_6     ,KC_7     ,KC_8     ,KC_9     ,KC_0
 // Colemak
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_COLMK_L_________________ MG(Q)   ,LT2(W)   ,KC_F     ,KC_P     ,KC_G
+#define _________________ROW_TOP_COLMK_L_________________ MG(Q)   , LT3(W)   ,KC_F     ,KC_P     ,KC_G
 #define _________________ROW_MID_COLMK_L_________________ KC_A     ,KC_R     ,KC_S     ,KC_T     ,KC_D
-#define _________________ROW_BOT_COLMK_L_________________ MS(Z)    ,LT3(X)   ,KC_C     ,KC_V     ,KC_B
+#define _________________ROW_BOT_COLMK_L_________________ MS(Z)    ,KC_X     ,KC_C     ,KC_V     ,KC_B
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // #define _________________ROW_MID_COLMK_L_________________ MC(A)    ,MA(R)    ,MG(S)    ,MS(T)    ,KC_D
