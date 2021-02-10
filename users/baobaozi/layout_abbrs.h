@@ -90,7 +90,7 @@
 // EXT (My extend like layer. With main navigation and easy access shortcuts)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_EXT_L___________________ AA(TAB)  ,KC_ESC   ,TD(RFSH) ,KC_VOLU  ,AC(C)
-#define _________________ROW_MID_EXT_L___________________ ACG(Q)   ,KC_LALT  ,KC_LSFT  ,KC_LCTL  ,KC_MNXT
+#define _________________ROW_MID_EXT_L___________________ KC_TAB   ,KC_LALT  ,KC_LSFT  ,KC_LCTL  ,KC_MNXT
 #define _________________ROW_BOT_EXT_L___________________ AC(Z)    ,AC(X)    ,AC(C)    ,AC(V)    ,ASG(M)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
