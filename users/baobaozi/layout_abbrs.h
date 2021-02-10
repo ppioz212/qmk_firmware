@@ -7,16 +7,16 @@
 // Layer change abbrs
 #define TGQ TG(_QWERTY)
 #define TGC TG(_COLEMAK)
-#define TG1 TG(_PRI)
+#define TG1 TG(_EXT)
 #define TG4 TG(_QUA)
 #define TG5 TG(_PEN)
-#define LM1 MO(_PRI)
+#define LM1 MO(_EXT)
 #define LM2 MO(_SEC)
 #define LM3 MO(_TER)
 #define LM4 MO(_QUA)
 
 // Layer tap abbrs
-#define LT1(kc) LT(_PRI, KC_##kc)
+#define LT1(kc) LT(_EXT, KC_##kc)
 #define LT2(kc) LT(_SEC, KC_##kc)
 #define LT3(kc) LT(_TER, KC_##kc)
 #define LT4(kc) LT(_QUA, KC_##kc)
@@ -71,12 +71,12 @@
 #define _________________ROW_5_NOTHING___________________ XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
 #define _________________ROW_5_TRNSPRNT__________________ _______  ,_______  ,_______  ,_______  ,_______
 #define _________________ROW_NUMBERS_L___________________ KC_1     ,KC_2     ,KC_3     ,KC_4     ,KC_5
-#define _________________ROW_NUMBERS_R___________________ KC_6     ,KC_7     ,KC_8     ,KC_9     ,KC_0
+#define _________________ROW_NUMBERS_R___________________ KC_6     ,KC_7     ,KC_LALT  ,KC_LALT  ,KC_LALT
 // Colemak
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_COLMK_L_________________ MG(Q)   , LT3(W)   ,KC_F     ,KC_P     ,KC_G
+#define _________________ROW_TOP_COLMK_L_________________ MG(Q)    ,KC_W     ,KC_F     ,KC_P     ,KC_G
 #define _________________ROW_MID_COLMK_L_________________ KC_A     ,KC_R     ,KC_S     ,KC_T     ,KC_D
-#define _________________ROW_BOT_COLMK_L_________________ MS(Z)    ,KC_X     ,KC_C     ,KC_V     ,KC_B
+#define _________________ROW_BOT_COLMK_L_________________ MS(Z)    ,LT3(X)   ,KC_C     ,KC_V     ,KC_B
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // #define _________________ROW_MID_COLMK_L_________________ MC(A)    ,MA(R)    ,MG(S)    ,MS(T)    ,KC_D
@@ -87,16 +87,16 @@
 #define _________________ROW_MID_COLMK_R_________________ KC_H     ,KC_N     ,KC_E     ,KC_I     ,KC_O
 #define _________________ROW_BOT_COLMK_R_________________ KC_K     ,KC_M     ,KC_COMM  ,KC_DOT   ,MS(SLSH)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
-// PRI (all media and navigation related stuff)
+// EXT (My extend like layer. With main navigation and easy access shortcuts)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_PRI_L___________________ TG1      ,OS(LSFT) ,TD(RFSH) ,KC_VOLU  ,AC(C)
-#define _________________ROW_MID_PRI_L___________________ ACG(Q)   ,KC_CAPS  ,KC_MPRV  ,KC_MPLY  ,KC_MNXT
-#define _________________ROW_BOT_PRI_L___________________ OS(LSFT) ,ASG(BSPC),XXXXXXX  ,KC_VOLD  ,ASG(M)
+#define _________________ROW_TOP_EXT_L___________________ AA(TAB)  ,KC_ESC   ,TD(RFSH) ,KC_VOLU  ,AC(C)
+#define _________________ROW_MID_EXT_L___________________ ACG(Q)   ,KC_LALT  ,KC_LSFT  ,KC_LCTL  ,KC_MNXT
+#define _________________ROW_BOT_EXT_L___________________ AC(Z)    ,AC(X)    ,AC(C)    ,AC(V)    ,ASG(M)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_PRI_R___________________ TD(RFSH) ,KC_HOME  ,KC_UP    ,KC_END   ,AA(RGHT)
-#define _________________ROW_MID_PRI_R___________________ KC_BSPC  ,KC_LEFT  ,KC_DOWN  ,KC_RIGHT ,KC_BSPC
-#define _________________ROW_BOT_PRI_R___________________ ASG(K)   ,MC(BSPC) ,AG(UP)   ,AG(DOWN) ,AG(RGHT)
+#define _________________ROW_TOP_EXT_R___________________ TD(RFSH) ,KC_HOME  ,KC_UP    ,KC_END   ,KC_DEL
+#define _________________ROW_MID_EXT_R___________________ KC_BSPC  ,KC_LEFT  ,KC_DOWN  ,KC_RIGHT ,KC_BSPC
+#define _________________ROW_BOT_EXT_R___________________ ASG(K)   ,AC(BSPC) ,AG(UP)   ,AG(DOWN) ,AG(RGHT)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // SEC (my most commonly required coding symbols)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐

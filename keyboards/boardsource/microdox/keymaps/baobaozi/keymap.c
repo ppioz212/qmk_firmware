@@ -19,13 +19,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             // └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘
     ),
 
-    [_PRI] = LAYOUT_wrapper(
+    [_EXT] = LAYOUT_wrapper(
         // ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐         ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-            _________________ROW_TOP_PRI_L___________________,          _________________ROW_TOP_PRI_R___________________,
+            _________________ROW_TOP_EXT_L___________________,          _________________ROW_TOP_EXT_R___________________,
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            _________________ROW_MID_PRI_L___________________,          _________________ROW_MID_PRI_R___________________,
+            _________________ROW_MID_EXT_L___________________,          _________________ROW_MID_EXT_R___________________,
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            _________________ROW_BOT_PRI_L___________________,          _________________ROW_BOT_PRI_R___________________,
+            _________________ROW_BOT_EXT_L___________________,          _________________ROW_BOT_EXT_R___________________,
         // └─────────┴─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┴─────────┘
                                 _______  ,_______  ,_______  ,          _______  ,KC_F     ,KC_ENT
                             // └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘
@@ -137,7 +137,7 @@ static void render_status(void) {
         // oled_write_P(PSTR("CMK PRI SEC TER QUA1\n"), false); // you get a max of 20 chars on these small OLEDs. 4 lines actually fits though!
         // oled_write_P(PSTR("CM PR SE TE QU PE\n"), false); // you get a max of 20 chars on these small OLEDs. 4 lines actually fits though!
         // You also have access to a `default_layer_state` for when you DF … so you can tell difference between which default layer you’re on
-        case _PRI:
+        case _EXT:
             oled_write_P(PSTR("    ^\n"), false);
             break;
         case _SEC:
