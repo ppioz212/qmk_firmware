@@ -59,7 +59,7 @@ void ql_finished_turn_on_layers(qk_tap_dance_state_t *state, void *user_data) {
     ql_tap_state.state = cur_dance(state);
     switch (ql_tap_state.state) {
         case SINGLE_HOLD:
-            layer_on(_PRI);
+            layer_on(_EXT);
             break;
         case DOUBLE_HOLD:
             layer_on(_SEC);
@@ -76,7 +76,7 @@ void ql_finished_turn_on_layers(qk_tap_dance_state_t *state, void *user_data) {
 void ql_reset_turn_off_layers(qk_tap_dance_state_t *state, void *user_data) {
     // if the key was held down and now is released then switch off the layer
     if (ql_tap_state.state == SINGLE_HOLD) {
-        layer_off(_PRI);
+        layer_off(_EXT);
     }
     if (ql_tap_state.state == DOUBLE_HOLD) {
         layer_off(_SEC);

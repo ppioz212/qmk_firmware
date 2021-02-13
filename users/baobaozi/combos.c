@@ -1,7 +1,7 @@
 #include "baobaozi.h"
 
 enum combo_events {
-    CHD_PRI,
+    CHD_EXT,
     CHD_TGPRI,
     CHD_TAB,
     CHD_GRV,
@@ -201,10 +201,10 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     // mod_state = get_mods();
 
     switch(combo_index) {
-        case CHD_PRI:
+        case CHD_EXT:
         case CHD_TGPRI:
             if (pressed) {
-                layer_on(_PRI);
+                layer_on(_EXT);
             }
             break;
         case CHD_QUA:

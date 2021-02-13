@@ -11,9 +11,9 @@
 #    define NO_DEBUG
 #endif // !NO_DEBUG
 
-#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
-#    define NO_PRINT
-#endif // !NO_PRINT
+#if !defined(NO_EXTNT) && !defined(CONSOLE_ENABLE)
+#    define NO_EXTNT
+#endif // !NO_EXTNT
 
 // no oneshots to save space
 // #define NO_ACTION_ONESHOT

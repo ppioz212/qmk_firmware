@@ -12,7 +12,7 @@
 // entirely and just use numbers.
 // #define _COLEMAK 0
 // #define _QWERTY 1
-// #define _PRI 2
+// #define _EXT 2
 // #define _SEC 3
 // #define _TER 4
 // #define _QUA 5
@@ -22,7 +22,7 @@ enum userspace_layers {
     // NEW_SAFE_RANGE,  // use "NEW_SAFE_RANGE" for keymap specific codes
     _COLEMAK = 0,
     _QWERTY,
-    _PRI,
+    _EXT,
     _SEC,
     _TER,
     _QUA,
