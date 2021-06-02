@@ -8,18 +8,20 @@
 #define TGQ TG(_QWERTY)
 #define TGC TG(_COLEMAK)
 #define TG1 TG(_EXT)
-#define TG4 TG(_QUA)
+#define TG2 TG(_SYM)
+#define TG3 TG(_TER)
+#define TG4 TG(_MEDIA)
 #define TG5 TG(_PEN)
 #define LM1 MO(_EXT)
-#define LM2 MO(_SEC)
+#define LM2 MO(_SYM)
 #define LM3 MO(_TER)
-#define LM4 MO(_QUA)
+#define LM4 MO(_MEDIA)
 
 // Layer tap abbrs
 #define LT1(kc) LT(_EXT, KC_##kc)
-#define LT2(kc) LT(_SEC, KC_##kc)
+#define LT2(kc) LT(_SYM, KC_##kc)
 #define LT3(kc) LT(_TER, KC_##kc)
-#define LT4(kc) LT(_QUA, KC_##kc)
+#define LT4(kc) LT(_MEDIA, KC_##kc)
 #define LT5(kc) LT(_PEN, KC_##kc)
 
 // Mod abbrs
@@ -55,14 +57,14 @@
 // Just leave ARSTNEIO with my own thumb key lol, theirs is shit
 #define __T_L1___ LM1
 // turns out, I keep mispressing one shots on thumbs, so turn it off for now
-#define __T_L2___ LM2
-#define __T_L3___ KC_LALT
+#define __T_L2___ OS(LSFT)
+#define __T_L3___ KC_LCTL
 // If there's an extra left thumb key:
 #define __T_L4___ LT4(CAPS)
 // Right thumbs
 #define __T_R1___ KC_SPC
-#define __T_R2___ KC_LCTL
-#define __T_R3___ LT4(CAPS)
+#define __T_R2___ LM2
+#define __T_R3___ KC_LALT
 // If there's an extra right thumb key, I prefer it between 2 and 3:
 #define __T_R2B__ KC_LCTL
 
@@ -71,7 +73,8 @@
 #define _________________ROW_5_NOTHING___________________ XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
 #define _________________ROW_5_TRNSPRNT__________________ _______  ,_______  ,_______  ,_______  ,_______
 #define _________________ROW_NUMBERS_L___________________ KC_1     ,KC_2     ,KC_3     ,KC_4     ,KC_5
-#define _________________ROW_NUMBERS_R___________________ KC_6     ,KC_7     ,KC_LALT  ,KC_LALT  ,KC_LALT
+#define _________________ROW_NUMBERS_R___________________ KC_6     ,KC_7     ,KC_8    ,KC_9      ,KC_0
+
 // Colemak
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_COLMK_L_________________ MG(Q)    ,KC_W     ,KC_F     ,KC_P     ,KC_G
@@ -87,28 +90,34 @@
 #define _________________ROW_MID_COLMK_R_________________ KC_H     ,KC_N     ,KC_E     ,KC_I     ,KC_O
 #define _________________ROW_BOT_COLMK_R_________________ KC_K     ,KC_M     ,KC_COMM  ,KC_DOT   ,MS(SLSH)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // EXT (My extend like layer. With main navigation and easy access shortcuts)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_EXT_L___________________ AA(TAB)  ,KC_ESC   ,TD(RFSH) ,KC_VOLU  ,AC(C)
-#define _________________ROW_MID_EXT_L___________________ KC_TAB   ,KC_LALT  ,KC_LSFT  ,KC_LCTL  ,KC_MNXT
-#define _________________ROW_BOT_EXT_L___________________ AC(Z)    ,AC(X)    ,AC(C)    ,AC(V)    ,ASG(M)
+#define _________________ROW_TOP_EXT_L___________________ AA(TAB)  ,KC_ESC   ,KC_TAB   ,KC_LALT  ,KC_MUTE
+#define _________________ROW_MID_EXT_L___________________ OS(LSFT) ,KC_LALT  ,KC_LSFT  ,KC_LCTL  ,KC_VOLU
+#define _________________ROW_BOT_EXT_L___________________ AC(Z)    ,AC(X)    ,AC(C)    ,AC(V)    ,KC_VOLD
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_EXT_R___________________ TD(RFSH) ,KC_HOME  ,KC_UP    ,KC_END   ,KC_DEL
-#define _________________ROW_MID_EXT_R___________________ KC_BSPC  ,KC_LEFT  ,KC_DOWN  ,KC_RIGHT ,KC_BSPC
-#define _________________ROW_BOT_EXT_R___________________ ASG(K)   ,AC(BSPC) ,AG(UP)   ,AG(DOWN) ,AG(RGHT)
+#define _________________ROW_TOP_EXT_R___________________ KC_MNXT  ,KC_HOME  ,KC_UP    ,KC_END   ,KC_DEL
+#define _________________ROW_MID_EXT_R___________________ KC_MPLY  ,KC_LEFT  ,KC_DOWN  ,KC_RIGHT ,KC_BSPC
+#define _________________ROW_BOT_EXT_R___________________ KC_MPRV  ,AC(BSPC) ,AG(UP)   ,AG(DOWN) ,AG(RGHT)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // SEC (my most commonly required coding symbols)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_SEC_L___________________ XXXXXXX  ,_______  ,OS(LSFT) ,XXXXXXX  ,XXXXXXX
-#define _________________ROW_MID_SEC_L___________________ XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
-#define _________________ROW_BOT_SEC_L___________________ OS(LSFT) ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
+#define _________________ROW_TOP_SYM_L___________________ KC_CAPS  ,KC_TILD  ,KC_CIRC  ,KC_QUES  ,KC_RBRC
+#define _________________ROW_MID_SYM_L___________________ KC_EXLM  ,KC_AT    ,KC_HASH  ,KC_DLR   ,KC_PERC
+#define _________________ROW_BOT_SYM_L___________________ KC_SCLN  ,_______  ,KC_PIPE  ,KC_AMPR  ,KC_BSLS
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_SEC_R___________________ KC_BSLS  ,KC_LBRC  ,KC_RBRC  ,KC_QUOT  ,KC_SCLN
-#define _________________ROW_MID_SEC_R___________________ KC_BSPC  ,TD(BRCO) ,TD(BRCC) ,KC_MINS  ,KC_EQL
-#define _________________ROW_BOT_SEC_R___________________ MJSPL    ,TD(DQUO) ,TD(SQUO) ,TD(ENEM) ,AA(SCLN)
+#define _________________ROW_TOP_SYM_R___________________ KC_LBRC  ,KC_LABK  ,KC_EQL   ,KC_RABK  ,KC_RBRC
+#define _________________ROW_MID_SYM_R___________________ KC_LCBR  ,KC_LPRN  ,KC_COLN  ,KC_RPRN  ,KC_RCBR
+#define _________________ROW_BOT_SYM_R___________________ XXXXXXX  ,KC_ASTR  ,KC_MINS  ,KC_PLUS  ,KC_UNDS
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // TER (numpad layer, i kept them as regular numrow keys instead of numpad keys, so i can get the other symbols i use less often)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_TER_L___________________ XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
@@ -120,19 +129,23 @@
 #define _________________ROW_MID_TER_R___________________ KC_BSPC  ,KC_4     ,KC_5     ,KC_6     ,KC_0
 #define _________________ROW_BOT_TER_R___________________ KC_PAST  ,KC_1     ,KC_2     ,KC_3     ,KC_DOT
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // QUA (keyboard actions and misc)
-#define _________________ROW_NUM_QUA_L___________________ KC_F1    ,KC_F2    ,KC_F3    ,KC_F4    ,KC_F5
-#define _________________ROW_NUM_QUA_R___________________ KC_F6    ,KC_F7    ,KC_F8    ,KC_F9    ,KC_F10
+#define _________________ROW_NUM_MEDIA_L___________________ KC_F1    ,KC_F2    ,KC_F3    ,KC_F4    ,KC_F5
+#define _________________ROW_NUM_MEDIA_R___________________ KC_F6    ,KC_F7    ,KC_F8    ,KC_F9    ,KC_F10
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_QUA_L___________________ TD(SRST) ,RGB_MOD  ,RGB_HUI  ,RGB_SAI  ,RGB_VAI
-#define _________________ROW_MID_QUA_L___________________ RGB_M_SW ,RGB_TOG  ,RGB_HUD  ,RGB_SAD  ,RGB_VAD
-#define _________________ROW_BOT_QUA_L___________________ ASG(3)   ,ASG(4)   ,ALL(3)   ,ALL(4)   ,DEBUG
+#define _________________ROW_TOP_MEDIA_L___________________ TD(SRST) ,RGB_MOD  ,RGB_HUI  ,RGB_SAI  ,RGB_VAI
+#define _________________ROW_MID_MEDIA_L___________________ RGB_M_SW ,RGB_TOG  ,RGB_HUD  ,RGB_SAD  ,RGB_VAD
+#define _________________ROW_BOT_MEDIA_L___________________ ASG(3)   ,ASG(4)   ,ALL(3)   ,ALL(4)   ,DEBUG
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐ // 140 bytes for a layer dedicated to f-row sucks
-#define _________________ROW_TOP_QUA_R___________________ KC_F1    ,KC_F2    ,KC_F3    ,KC_F4    ,KC_F5
-#define _________________ROW_MID_QUA_R___________________ KC_F11   ,KC_F12   ,KC_PAUS  ,KC_SLCK  ,TD(SEEP)
-#define _________________ROW_BOT_QUA_R___________________ TD(F212) ,ASG(Y)   ,ASG(SPC) ,AG(SPC)  ,XXXXXXX
+#define _________________ROW_TOP_MEDIA_R___________________ KC_F1    ,KC_F2    ,KC_F3    ,KC_F4    ,KC_F5
+#define _________________ROW_MID_MEDIA_R___________________ KC_F11   ,KC_F12   ,KC_PAUS  ,KC_SLCK  ,TD(SEEP)
+#define _________________ROW_BOT_MEDIA_R___________________ TD(F212) ,ASG(Y)   ,ASG(SPC) ,AG(SPC)  ,XXXXXXX
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // PEN (mouse layer)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_PEN_L___________________ TG5      ,KC_ACL2  ,KC_ACL1  ,KC_ACL0  ,XXXXXXX
@@ -144,6 +157,8 @@
 #define _________________ROW_MID_PEN_R___________________ KC_BSPC  ,KC_MS_L  ,KC_MS_U  ,KC_MS_D  ,KC_MS_R
 #define _________________ROW_BOT_PEN_R___________________ KC_PGDN  ,KC_WH_L  ,KC_WH_D  ,KC_WH_U  ,KC_WH_L // reversed Up/Down because of Apple’s Natural style scrolling
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
+
 // QWERTY (is pretty shit and i forgot how to use it so i will probably delete it later)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── E ───┬─── R ───┬─── T ───┐
 #define _________________ROW_TOP_QWERT_L_________________ LT1(Q)   ,LT2(W)   ,KC_E     ,KC_R     ,KC_T

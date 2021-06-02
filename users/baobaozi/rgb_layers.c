@@ -50,9 +50,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // rgblight_set_layer_state(0, layer_state_cmp(state, _COLEMAK));
     rgblight_set_layer_state(1, layer_state_cmp(state, _QWERTY));
     rgblight_set_layer_state(2, layer_state_cmp(state, _EXT));
-    rgblight_set_layer_state(3, layer_state_cmp(state, _SEC));
+    rgblight_set_layer_state(3, layer_state_cmp(state, _SYM));
     rgblight_set_layer_state(4, layer_state_cmp(state, _TER));
-    rgblight_set_layer_state(5, layer_state_cmp(state, _QUA));
+    rgblight_set_layer_state(5, layer_state_cmp(state, _MEDIA));
     rgblight_set_layer_state(6, layer_state_cmp(state, _PEN));
 
     // RGB Modes

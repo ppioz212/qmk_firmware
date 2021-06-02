@@ -62,13 +62,13 @@ void ql_finished_turn_on_layers(qk_tap_dance_state_t *state, void *user_data) {
             layer_on(_EXT);
             break;
         case DOUBLE_HOLD:
-            layer_on(_SEC);
+            layer_on(_SYM);
             break;
         case TRIPLE_HOLD:
             layer_on(_TER);
             break;
         case QUADRUPLE_HOLD:
-            layer_on(_QUA);
+            layer_on(_MEDIA);
             break;
     }
 }
@@ -79,13 +79,13 @@ void ql_reset_turn_off_layers(qk_tap_dance_state_t *state, void *user_data) {
         layer_off(_EXT);
     }
     if (ql_tap_state.state == DOUBLE_HOLD) {
-        layer_off(_SEC);
+        layer_off(_SYM);
     }
     if (ql_tap_state.state == TRIPLE_HOLD) {
         layer_off(_TER);
     }
     if (ql_tap_state.state == QUADRUPLE_HOLD) {
-        layer_off(_QUA);
+        layer_off(_MEDIA);
     }
 
     ql_tap_state.state = 0;

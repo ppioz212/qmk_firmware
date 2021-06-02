@@ -13,9 +13,9 @@
 // #define _COLEMAK 0
 // #define _QWERTY 1
 // #define _EXT 2
-// #define _SEC 3
+// #define _SYM 3
 // #define _TER 4
-// #define _QUA 5
+// #define _MEDIA 5
 
 enum userspace_layers {
     // KC_MAKE = SAFE_RANGE,
@@ -23,9 +23,9 @@ enum userspace_layers {
     _COLEMAK = 0,
     _QWERTY,
     _EXT,
-    _SEC,
+    _SYM,
     _TER,
-    _QUA,
+    _MEDIA,
     _PEN
 };
 

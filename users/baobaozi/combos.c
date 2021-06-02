@@ -16,7 +16,7 @@ enum combo_events {
     CHD_BSPCSEC,
     CHD_BSPCTER,
     CHD_CLR,
-    CHD_QUA,
+    CHD_MEDIA,
     CHD_PEN,
     CHD_QWER,
     CHD_F6,
@@ -152,7 +152,7 @@ combo_t key_combos[] = {
     [CHD_BSPCSEC] = COMBO(bspcsec_combo, KC_BSPC),
     [CHD_BSPCTER] = COMBO(bspcter_combo, KC_BSPC),
     [CHD_CLR] = COMBO_ACTION(clr_combo),
-    [CHD_QUA] = COMBO_ACTION(qua_combo),
+    [CHD_MEDIA] = COMBO_ACTION(qua_combo),
     [CHD_PEN] = COMBO(pen_combo, TG5),
     [CHD_QWER] = COMBO(qwer_combo, TGQ),
     [CHD_F6] = COMBO(f6_combo, KC_F6),
@@ -207,9 +207,9 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 layer_on(_EXT);
             }
             break;
-        case CHD_QUA:
+        case CHD_MEDIA:
             if (pressed) {
-                set_oneshot_layer(_QUA, ONESHOT_START);
+                set_oneshot_layer(_MEDIA, ONESHOT_START);
             } else {
                 clear_oneshot_layer_state(ONESHOT_PRESSED);
             }
